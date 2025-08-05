@@ -1,0 +1,68 @@
+# Proyecto: cafeteria-backend-modular
+🎯 Objetivo
+Crear un sistema backend para gestionar los pedidos, el menú y la administración de una cafetería, con énfasis en modularidad, validación de entradas, y manejo de estructuras como listas, diccionarios y JSON.
+
+🧠 Concepto central
+Una API que simula el funcionamiento interno de una cafetería. El sistema debe permitir:
+- 📋 Registrar pedidos
+- 📦 Consultar disponibilidad de productos
+- 🛠️ Validar entradas del usuario (ej. cantidad, productos existentes)
+- 📊 Consultar estadísticas (como los productos más pedidos)
+
+🗂️ Estructura del proyecto sugerida
+cafeteria-backend-modular/
+├── app/
+│   ├── __init__.py
+│   ├── menu.py         # Gestión del menú y precios
+│   ├── order.py        # Manejo de pedidos y estados
+│   ├── validate.py     # Validación de entradas del usuario
+│   └── utils.py        # Funciones auxiliares (formato, logs, etc.)
+├── data/
+│   └── menu.json       # Menú con productos, precios y disponibilidad
+├── tests/
+│   └── test_order.py   # Pruebas unitarias de la lógica de pedidos
+├── main.py             # Punto de entrada del sistema
+└── README.md
+
+
+
+🔧 Funcionalidades clave
+- menu.py
+- Cargar menú desde JSON
+- Consultar precios y productos disponibles
+- order.py
+- Crear nuevo pedido (nombre cliente, productos, cantidad)
+- Calcular total y estado del pedido
+- validate.py
+- Comprobar que el producto existe
+- Validar tipos y estructuras del pedido
+- Verificar stock disponible
+
+📥 Ejemplo de entrada
+pedido = {
+    "cliente": "Pablo",
+    "productos": [
+        {"nombre": "Latte", "cantidad": 2},
+        {"nombre": "Croissant", "cantidad": 1}
+    ]
+}
+
+
+📤 Ejemplo de salida
+{
+    "total": 5800,
+    "estado": "Pendiente",
+    "mensaje": "Pedido registrado correctamente"
+}
+
+
+
+🚀 Ideas extra
+- Añadir un sistema de autenticación básica (usuarios empleados)
+- Persistencia de pedidos en .txt o .json
+- Generación de reportes diarios en formato de texto
+- Exportar estadísticas de pedidos por día
+
+Si te entusiasma, puedo ayudarte a empezar con el archivo main.py y los módulos base. También podemos hacer una guía README.md para que brille en GitHub. ¿Lo armamos paso a paso?
+
+
